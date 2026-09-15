@@ -217,11 +217,12 @@
 							<article class="from-left">
 								<div class="image fit" 
 									data-modal-trigger 
-      								data-iframe="embed-arcgis-covid"
-									data-description="COVID-19 Dashboard"
-									data-link="https://insights.arcgis.com/#/view/20b55f801ee84c02881a835334f696fe">
+									data-image="images/thumbs/covid.png"
+									data-description="COVID-19 analysis — archived dashboard preview. Created with ArcGIS Insights, which has since retired."
+									data-link-label="View Dashboard Image"
+									data-link="images/thumbs/covid.png">
 									<span class="image-header">COVID-19 Analysis in the US</span>
-									<img src="images/thumbs/covid.png" alt="Cancer Prevalence" />
+									<img src="images/thumbs/covid.png" alt="COVID-19 dashboard preview" />
 								</div>
 							</article>
 							<article class="from-right">
@@ -229,7 +230,7 @@
 									data-modal-trigger 
 									data-image="images/thumbs/grenada.png"
 									data-description="Grenada Landslide Analysis"
-									data-link="https://public.tableau.com/views/Homework3_16950726831440/Dashboard1">
+									data-link="https://www.arcgis.com/apps/mapviewer/index.html?webmap=c021a88c2be245f58b74a2ecfc46d375">
 									<span class="image-header">Landslide Analysis</span>
 									<img src="images/thumbs/grenada.png" alt="Grenada Landslide Analysis" />
 								</div>
@@ -251,54 +252,16 @@
 							</div>
 						</div>
 
-						<!-- <section id="arcgis-dashboard" class="main style3 primary">
-						<div class="content box">
-							<header>
-							<h2>ArcGIS Insights Dashboard</h2>
-							</header>
-							<iframe src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
-									width="100%" height="400" frameborder="0"></iframe>
-						</div>
-						</section> -->
-
-						<!-- <div id="embed-arcgis-covid" style="display: none;"></div>
-							<div style="overflow: hidden; width: 100%; height: 900px;">
-								<header>
-								<h2>ArcGIS COVID-19 in the US</h2>
-								</header>
-								<iframe 
-									src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
-									style="width: 200%; height: 900px; transform: scale(0.70); transform-origin: top left; border: 0;"
-									scrolling="no">
-								</iframe>
-							</div>
-						</div>
-
-						<div id="embed-arcgis-grenada" style="display: none;"></div>
-							<div style="overflow: hidden; width: 100%; height: 900px;">
-								<header>
-								<h2>ArcGIS Grenada Landslide Analysis</h2>
-								</header>
- 								<arcgis-embedded-map style="height:600px;width:700px;" 
-									item-id="c021a88c2be245f58b74a2ecfc46d375" 
-									theme="light" 
-									heading-enabled legend-enabled portal-url="https://sdsugeo.maps.arcgis.com" >
-								</arcgis-embedded-map>"
-								
-							</div>
-						</div> -->
-						<!-- ArcGIS COVID -->
-						<div id="embed-arcgis-covid" style="display: none;"></div>
-						<div style="overflow: hidden; width: 100%; height: 900px;">
-							<header>
-								<h2>ArcGIS COVID-19 in the US</h2>
-							</header>
-							<iframe 
-								src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
-								style="width: 200%; height: 900px; transform: scale(0.70); transform-origin: top left; border: 0;"
-								scrolling="no">
-							</iframe>
-						</div>
+						<section id="arcgis-covid" aria-labelledby="covid-title">
+                            <header>
+                                <h2 id="covid-title">COVID-19 Analysis in the US</h2>
+                                <p>Archived dashboard preview · Created with ArcGIS Insights.</p>
+                            </header>
+                            <a href="images/thumbs/covid.png" target="_blank" rel="noopener">
+                                <img src="images/thumbs/covid.png" alt="Archived COVID-19 analysis dashboard" loading="lazy" style="width: 100%; height: auto;" />
+                            </a>
+                            <p>ArcGIS Insights has retired. This saved image preserves the original dashboard; interactive filters are no longer available.</p>
+                        </section>
 
 						<!-- ArcGIS Grenada -->
 						<div id="embed-arcgis-grenada" style="display: none;"></div>
@@ -396,7 +359,7 @@
 
 		<!-- <div id="dashboardModal" class="custom-modal">
 			<div class="modal-content">
-				<span class="close-button">&times;</span>
+				<button type="button" class="close-button" aria-label="Close project preview">&times;</button>
 				<img id="modal-image" src="" alt="Dashboard Screenshot" />
 				<p id="modal-description"></p>
 				<a id="modal-link" class="button" href="#" target="_blank">View Full Dashboard</a>
@@ -404,7 +367,7 @@
 		</div>		 -->
 		<div id="dashboardModal" class="custom-modal">
 			<div class="modal-content">
-				<span class="close-button">&times;</span>
+				<button type="button" class="close-button" aria-label="Close project preview">&times;</button>
 
 				<!-- BOTH elements are here; we toggle them via JS -->
 				<div id="modal-embed" style="width: 100%; height: auto;"></div>
@@ -461,21 +424,7 @@
 			vizElement.parentNode.insertBefore(scriptElement, vizElement);
 		</script>
 
-		<section id="arcgis-covid" class="main style3 primary">
-			<div class="content box">
-				<header>
-				<h2>COVID-19 Analysis in the US</h2>
-				<p>Exploring spatial trends in pandemic response using ArcGIS Insights.</p>
-				</header>
-				<div style="overflow: hidden; width: 100%; height: 900px;">
-				<iframe 
-					src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
-					style="width: 200%; height: 900px; transform: scale(0.70); transform-origin: top left; border: 0;"
-					scrolling="no">
-				</iframe>
-				</div>
-			</div>
-		</section>
+
 
 
 

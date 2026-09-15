@@ -236,35 +236,6 @@
 			.on('load', function() {
 				$window.trigger('resize');
 			});
-	// === Custom Modal Logic ===
-	// document.addEventListener("DOMContentLoaded", function () {
-	// 	const triggers = document.querySelectorAll("[data-modal-trigger]");
-	// 	const modal = document.getElementById("dashboardModal");
-	// 	const modalImage = document.getElementById("modal-image");
-	// 	const modalDescription = document.getElementById("modal-description");
-	// 	const modalLink = document.getElementById("modal-link");
-	// 	const closeButton = document.querySelector(".close-button");
-
-	// 	triggers.forEach(trigger => {
-	// 		trigger.addEventListener("click", () => {
-	// 		modalImage.src = trigger.getAttribute("data-image");
-	// 		modalDescription.textContent = trigger.getAttribute("data-description");
-	// 		modalLink.href = trigger.getAttribute("data-link");
-	// 		modal.style.display = "block";
-	// 		});
-	// 	});
-
-	// 	closeButton.addEventListener("click", () => {
-	// 		modal.style.display = "none";
-	// 	});
-
-	// 	window.addEventListener("click", (e) => {
-	// 		if (e.target === modal) {
-	// 		modal.style.display = "none";
-	// 		}
-	// 	});
-	// });
-	// 
 	document.addEventListener("DOMContentLoaded", function () {
 		const triggers = document.querySelectorAll("[data-modal-trigger]");
 		const modal = document.getElementById("dashboardModal");
@@ -277,10 +248,24 @@
 
 
 
+        function closeModal() {
+            modal.style.display = "none";
+            embedContainer.innerHTML = "";
+        }
+        closeButton.addEventListener("click", closeModal);
+        modal.addEventListener("click", event => {
+            if (event.target === modal) closeModal();
+        });
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") closeModal();
+        });
+
 		triggers.forEach(trigger => {
 			trigger.addEventListener("click", () => {
 				const embedContainer = document.getElementById("modal-embed");
-				embedContainer.innerHTML = ""; // ✅ Clear first!
+				embedContainer.innerHTML = "";
+				embedContainer.style.display = "none";
+				modalImage.style.display = "none";
 
 				const iframeId = trigger.getAttribute("data-iframe");
 				const imageUrl = trigger.getAttribute("data-image");
@@ -295,11 +280,13 @@
 				}
 				} else if (imageUrl) {
 				modalImage.src = imageUrl;
+				modalImage.alt = description || "Project preview";
 				modalImage.style.display = "block";
 				}
 
 				modalDescription.textContent = description;
 				modalLink.href = link;
+				modalLink.textContent = trigger.getAttribute("data-link-label") || "Open in New Tab";
 				modal.style.display = "block";
 			});
 		});
