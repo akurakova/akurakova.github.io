@@ -5,12 +5,22 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	
 	<head>
 		<title>Anastasia Kurakova Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>	
+			.gallery .from-left .image.fit img,
+			.gallery .from-right .image.fit img {
+			border: 8px solid #FFFFFF;
+			box-sizing: border-box;
+			}
+		</style>
+		
+		<script type="module" src="https://js.arcgis.com/embeddable-components/4.32/arcgis-embeddable-components.esm.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -34,10 +44,16 @@
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content">
 					<header>
-						<h2>Hey.</h2>
+						<h2>Hey. And Welcome!</h2>
 					</header>
-					<p>Welcome to <strong>Big Picture</strong> a responsive site template designed by <a href="https://html5up.net">HTML5 UP</a><br />
-					and released for free under the <a href="https://html5up.net/license">Creative Commons Attribution license</a>.</p>
+					<p><strong> Hi, I’m Anastasia. Welcome to my portfolio. I’m a data scientist with a background in biology, and I love using data to uncover patterns, tell stories, and support meaningful work.
+						This website highlights the different kinds of projects I’ve worked on - from hands-on machine learning and research to interactive dashboards built to spark curiosity and conversation. 
+						You’ll also find information on the skills I’ve developed and the certifications I’ve earned along the way. Thanks for stopping by! I’m glad you’re here.
+					</strong></p>
+						
+						<!-- <br>I'm Anastasia and I am a data scientist. On this website you'll find my portfolio. 
+						It includes information about my skills and certifications, projects I created both technical (machine learning) and visual (dashboards). 
+						You'll also find information on scientific research I am a part of.</br></p> -->
 					<footer>
 						<a href="#one" class="button style2 down">More</a>
 					</footer>
@@ -126,37 +142,181 @@
 								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
 							</article> -->
 							<!-- Dashboard 1 with lightbox -->
-							<article class="from-left">
-								<a href="https://public.tableau.com/views/BritishAirwaysReview_17196163462630/Dashboard1"
-									target="_blank"
-									class="image fit">
-									<img src="images/thumbs/airlines.png" alt="Dashboard" />
+							<!-- <article class="from-left">
+								<a href="#project1" class="image fit">
+									<img src="images/thumbs/airlines.png" alt="Airlines Dashboard Thumbnail" />
 								</a>
+								
+							</article> -->
+							<article class="from-left">
+								<div class="image fit" 
+									data-modal-trigger 
+									data-image="images/thumbs/AoU.png"
+									data-description="All of US"
+									data-link="https://allofus.nih.gov/">
+									<span class="image-header">All of Us Project</span>
+									<img src="images/thumbs/AoU.png" alt="All of Us Thumbnail" />
+								</div>
+								<!-- <div class="image fit"
+									data-modal-trigger
+									data-iframe="tableau-embed-british-airways"
+									data-description="Interactive Tableau dashboard of British Airways."
+									data-link="https://public.tableau.com/views/BritishAirwaysReview_17196163462630/Dashboard1">
+									<img src="images/thumbs/airlines.png" alt="Tableau Project" />
+								</div> -->
+
+
 							</article>
+
+
 
 
 						
 
 							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
+								<div class="image fit" 
+									data-modal-trigger 
+									data-image="images/thumbs/airlines.png"
+									data-description="✈️ British Airways dashboard with satisfaction and flight metrics"
+									data-link="https://public.tableau.com/views/BritishAirwaysReview_17196163462630/Dashboard1">
+									<span class="image-header">British Airways Dashboard</span>
+									<img src="images/thumbs/airlines.png" alt="Airlines Thumbnail" />
+								</div>
+								<!-- <div class="image fit"
+									data-modal-trigger
+									data-iframe="tableau-embed-british-airways"
+									data-description="Interactive Tableau dashboard of British Airways."
+									data-link="https://public.tableau.com/views/BritishAirwaysReview_17196163462630/Dashboard1">
+									<img src="images/thumbs/airlines.png" alt="Tableau Project" />
+								</div> -->
 							</article>
 
 
 
 
 							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
+								<div class="image fit" 
+									data-modal-trigger 
+									data-image="images/thumbs/imdb.png"
+									data-description="IMDB Challenge"
+									data-link="https://public.tableau.com/views/DataPlusMovies2000-2023_16997433259730/Story1">
+									<span class="image-header">IMDB Challenge</span>
+									<img src="images/thumbs/imdb.png" alt="IMDB Thumbnail" />
+								</div>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
+								<div class="image fit" 
+									data-modal-trigger 
+									data-image="images/thumbs/cancer.png"
+									data-description="Cancer Prevalence Dashboard"
+									data-link="https://public.tableau.com/views/Homework3_16950726831440/Dashboard1">
+									<span class="image-header">Cancer Prevalence</span>
+									<img src="images/thumbs/cancer.png" alt="Cancer Prevalence" />
+								</div>
 							</article>
 							<article class="from-left">
-								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
+								<div class="image fit" 
+									data-modal-trigger 
+      								data-iframe="embed-arcgis-covid"
+									data-description="COVID-19 Dashboard"
+									data-link="https://insights.arcgis.com/#/view/20b55f801ee84c02881a835334f696fe">
+									<span class="image-header">COVID-19 Analysis in the US</span>
+									<img src="images/thumbs/covid.png" alt="Cancer Prevalence" />
+								</div>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
+								<div class="image fit" 
+									data-modal-trigger 
+									data-image="images/thumbs/grenada.png"
+									data-description="Grenada Landslide Analysis"
+									data-link="https://public.tableau.com/views/Homework3_16950726831440/Dashboard1">
+									<span class="image-header">Landslide Analysis</span>
+									<img src="images/thumbs/grenada.png" alt="Grenada Landslide Analysis" />
+								</div>
 							</article>
 						</div>
+						<div id="project1" style="display: none;">
+							<div style="max-width: 800px; padding: 20px;">
+								<img src="images/thumbs/airlines.png" style="width: 100%; border-radius: 8px;" alt="Airlines Dashboard Screenshot" />
+								<p style="margin-top: 1em;">
+								✈️ This dashboard provides a visual review of British Airways performance metrics, including customer satisfaction, delay rates, and flight coverage.
+								Built using Tableau Public and published as an interactive overview for aviation stakeholders.
+								</p>
+								<a href="https://public.tableau.com/views/BritishAirwaysReview_17196163462630/Dashboard1"
+								class="button"
+								target="_blank"
+								style="display: inline-block; margin-top: 1em;">
+								View Full Dashboard
+								</a>
+							</div>
+						</div>
+
+						<!-- <section id="arcgis-dashboard" class="main style3 primary">
+						<div class="content box">
+							<header>
+							<h2>ArcGIS Insights Dashboard</h2>
+							</header>
+							<iframe src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
+									width="100%" height="400" frameborder="0"></iframe>
+						</div>
+						</section> -->
+
+						<!-- <div id="embed-arcgis-covid" style="display: none;"></div>
+							<div style="overflow: hidden; width: 100%; height: 900px;">
+								<header>
+								<h2>ArcGIS COVID-19 in the US</h2>
+								</header>
+								<iframe 
+									src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
+									style="width: 200%; height: 900px; transform: scale(0.70); transform-origin: top left; border: 0;"
+									scrolling="no">
+								</iframe>
+							</div>
+						</div>
+
+						<div id="embed-arcgis-grenada" style="display: none;"></div>
+							<div style="overflow: hidden; width: 100%; height: 900px;">
+								<header>
+								<h2>ArcGIS Grenada Landslide Analysis</h2>
+								</header>
+ 								<arcgis-embedded-map style="height:600px;width:700px;" 
+									item-id="c021a88c2be245f58b74a2ecfc46d375" 
+									theme="light" 
+									heading-enabled legend-enabled portal-url="https://sdsugeo.maps.arcgis.com" >
+								</arcgis-embedded-map>"
+								
+							</div>
+						</div> -->
+						<!-- ArcGIS COVID -->
+						<div id="embed-arcgis-covid" style="display: none;"></div>
+						<div style="overflow: hidden; width: 100%; height: 900px;">
+							<header>
+								<h2>ArcGIS COVID-19 in the US</h2>
+							</header>
+							<iframe 
+								src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
+								style="width: 200%; height: 900px; transform: scale(0.70); transform-origin: top left; border: 0;"
+								scrolling="no">
+							</iframe>
+						</div>
+
+						<!-- ArcGIS Grenada -->
+						<div id="embed-arcgis-grenada" style="display: none;"></div>
+						<div style="overflow: hidden; width: 100%; height: 900px;">
+							<header>
+								<h2>ArcGIS Grenada Landslide Analysis</h2>
+							</header>
+							<arcgis-embedded-map 
+								style="height: 100%; width: 100%;" 
+								item-id="c021a88c2be245f58b74a2ecfc46d375" 
+								theme="light" 
+								heading-enabled 
+								legend-enabled 
+								portal-url="https://sdsugeo.maps.arcgis.com">
+							</arcgis-embedded-map>
+						</div>
+
+
 						
 
 
@@ -232,6 +392,93 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+		<!-- <div id="dashboardModal" class="custom-modal">
+			<div class="modal-content">
+				<span class="close-button">&times;</span>
+				<img id="modal-image" src="" alt="Dashboard Screenshot" />
+				<p id="modal-description"></p>
+				<a id="modal-link" class="button" href="#" target="_blank">View Full Dashboard</a>
+			</div>
+		</div>		 -->
+		<div id="dashboardModal" class="custom-modal">
+			<div class="modal-content">
+				<span class="close-button">&times;</span>
+
+				<!-- BOTH elements are here; we toggle them via JS -->
+				<div id="modal-embed" style="width: 100%; height: auto;"></div>
+				<img id="modal-image" src="" alt="Dashboard Screenshot" style="display: none; max-width: 100%; border-radius: 6px;" />
+
+				<p id="modal-description"></p>
+				<a id="modal-link" class="button" href="#" target="_blank">Open in New Tab</a>
+			</div>
+		</div>
+		
+
+
+
+		<div id="tableau-embed-british-airways" style="display: none;">
+			<div class="tableauPlaceholder" id="vizBAW" style="width: 100%; height: 600px;">
+				<noscript>
+				<a href="https://public.tableau.com/views/BritishAirwaysReview_17196163462630/Dashboard1" target="_blank">
+					<img src="https://public.tableau.com/static/images/Br/BritishAirwaysReview_17196163462630/Dashboard1/1_rss.png" alt="Dashboard 1" style="border: none;" />
+				</a>
+				</noscript>
+				<object class="tableauViz" style="display:none;">
+				<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+				<param name="embed_code_version" value="3" />
+				<param name="site_root" value="" />
+				<param name="name" value="BritishAirwaysReview_17196163462630/Dashboard1" />
+				<param name="tabs" value="no" />
+				<param name="toolbar" value="yes" />
+				<param name="static_image" value="https://public.tableau.com/static/images/Br/BritishAirwaysReview_17196163462630/Dashboard1/1.png" />
+				<param name="animate_transition" value="yes" />
+				<param name="display_static_image" value="yes" />
+				<param name="display_spinner" value="yes" />
+				<param name="display_overlay" value="yes" />
+				<param name="display_count" value="yes" />
+				<param name="language" value="en-US" />
+				</object>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var divElement = document.getElementById("vizBAW");
+			var vizElement = divElement.getElementsByTagName("object")[0];
+			if (divElement.offsetWidth > 800) {
+				vizElement.style.width = "100%";
+				vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+			} else if (divElement.offsetWidth > 500) {
+				vizElement.style.width = "100%";
+				vizElement.style.height = (divElement.offsetWidth * 0.75) + "px";
+			} else {
+				vizElement.style.width = "100%";
+				vizElement.style.height = "1477px";
+			}
+			var scriptElement = document.createElement("script");
+			scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+			vizElement.parentNode.insertBefore(scriptElement, vizElement);
+		</script>
+
+		<section id="arcgis-covid" class="main style3 primary">
+			<div class="content box">
+				<header>
+				<h2>COVID-19 Analysis in the US</h2>
+				<p>Exploring spatial trends in pandemic response using ArcGIS Insights.</p>
+				</header>
+				<div style="overflow: hidden; width: 100%; height: 900px;">
+				<iframe 
+					src="https://insights.arcgis.com/#/embed/20b55f801ee84c02881a835334f696fe"
+					style="width: 200%; height: 900px; transform: scale(0.70); transform-origin: top left; border: 0;"
+					scrolling="no">
+				</iframe>
+				</div>
+			</div>
+		</section>
+
+
+
 
 	</body>
 </html>

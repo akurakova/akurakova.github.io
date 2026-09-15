@@ -106,12 +106,11 @@
 				usePopupNav: true,
 
 				popupContent: function($a) {
-					// Check if the link points to a hidden div with iframe
-					var href = $a.attr('href');
-					if (href && href.startsWith("#")) {
-					return $(href).html();  // Returns hidden iframe container
+					const targetId = $a.attr("href");
+					if (targetId && targetId.startsWith("#")) {
+						return $(targetId).html();
 					}
-					return '<img src="' + href + '" />';
+					return '<img src="' + $a.attr("href") + '" />';
 				}
 			});
 
@@ -237,5 +236,80 @@
 			.on('load', function() {
 				$window.trigger('resize');
 			});
+	// === Custom Modal Logic ===
+	// document.addEventListener("DOMContentLoaded", function () {
+	// 	const triggers = document.querySelectorAll("[data-modal-trigger]");
+	// 	const modal = document.getElementById("dashboardModal");
+	// 	const modalImage = document.getElementById("modal-image");
+	// 	const modalDescription = document.getElementById("modal-description");
+	// 	const modalLink = document.getElementById("modal-link");
+	// 	const closeButton = document.querySelector(".close-button");
 
+	// 	triggers.forEach(trigger => {
+	// 		trigger.addEventListener("click", () => {
+	// 		modalImage.src = trigger.getAttribute("data-image");
+	// 		modalDescription.textContent = trigger.getAttribute("data-description");
+	// 		modalLink.href = trigger.getAttribute("data-link");
+	// 		modal.style.display = "block";
+	// 		});
+	// 	});
+
+	// 	closeButton.addEventListener("click", () => {
+	// 		modal.style.display = "none";
+	// 	});
+
+	// 	window.addEventListener("click", (e) => {
+	// 		if (e.target === modal) {
+	// 		modal.style.display = "none";
+	// 		}
+	// 	});
+	// });
+	// 
+	document.addEventListener("DOMContentLoaded", function () {
+		const triggers = document.querySelectorAll("[data-modal-trigger]");
+		const modal = document.getElementById("dashboardModal");
+		const embedContainer = document.getElementById("modal-embed");
+		const modalImage = document.getElementById("modal-image");
+		const modalDescription = document.getElementById("modal-description");
+		const modalLink = document.getElementById("modal-link");
+		const closeButton = document.querySelector(".close-button");
+
+
+
+
+		triggers.forEach(trigger => {
+			trigger.addEventListener("click", () => {
+				const embedContainer = document.getElementById("modal-embed");
+				embedContainer.innerHTML = ""; // ✅ Clear first!
+
+				const iframeId = trigger.getAttribute("data-iframe");
+				const imageUrl = trigger.getAttribute("data-image");
+				const description = trigger.getAttribute("data-description");
+				const link = trigger.getAttribute("data-link");
+
+				if (iframeId) {
+				const embedHtml = document.getElementById(iframeId);
+				if (embedHtml) {
+					embedContainer.innerHTML = embedHtml.innerHTML;
+					embedContainer.style.display = "block";
+				}
+				} else if (imageUrl) {
+				modalImage.src = imageUrl;
+				modalImage.style.display = "block";
+				}
+
+				modalDescription.textContent = description;
+				modalLink.href = link;
+				modal.style.display = "block";
+			});
+		});
+	});
+
+
+
+
+
+
+	
 })(jQuery);
+
