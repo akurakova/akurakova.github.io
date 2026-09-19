@@ -294,9 +294,8 @@
 		});
 
 		liveDashboards.forEach(link => {
-			link.addEventListener("click", event => {
-				event.preventDefault();
-				window.location.assign(link.href);
+			link.addEventListener("keydown", event => {
+				if (event.key === "Enter" || event.key === " ") link.click();
 			});
 		});
 	});
