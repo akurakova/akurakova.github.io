@@ -2373,6 +2373,39 @@ input, select, textarea {
   font-size: 2rem;
   cursor: pointer;
 }
+
+/* Keep project-preview controls independent from the template's green buttons. */
+#dashboardModal .close-button {
+  align-items: center;
+  background: #243b53;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-flex;
+  float: right;
+  font-size: 1.7rem;
+  height: 2.35rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  width: 2.35rem;
+}
+
+#dashboardModal .close-button:hover {
+  background: #102a43;
+}
+
+#dashboardModal #modal-link.button {
+  background: #176b87 !important;
+  border: 0;
+  box-shadow: none;
+  color: #ffffff !important;
+  margin-top: 0.75rem;
+}
+
+#dashboardModal #modal-link.button:hover {
+  background: #0f5470 !important;
+}
 #modal-embed {
   max-width: 1000px;
   margin: auto;
