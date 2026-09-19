@@ -79,7 +79,7 @@
 	// Gallery.
 		$window.on('load', function() {
 
-			var $gallery = $('.gallery');
+			var $gallery = $('.gallery').not('.dashboard-gallery');
 
 			// $gallery.poptrox({
 			// 	baseZIndex: 10001,
@@ -94,7 +94,6 @@
 			// 	usePopupNav: true
 			// });
 			$gallery.poptrox({
-				selector: 'a:not([data-live-dashboard])',
 				baseZIndex: 10001,
 				useBodyOverflow: false,
 				usePopupEasyClose: true,
