@@ -94,6 +94,7 @@
 			// 	usePopupNav: true
 			// });
 			$gallery.poptrox({
+				selector: 'a:not([data-live-dashboard])',
 				baseZIndex: 10001,
 				useBodyOverflow: false,
 				usePopupEasyClose: true,
