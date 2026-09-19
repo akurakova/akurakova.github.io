@@ -239,6 +239,7 @@
 			});
 	document.addEventListener("DOMContentLoaded", function () {
 		const triggers = document.querySelectorAll("[data-modal-trigger]");
+		const liveDashboards = document.querySelectorAll("[data-live-dashboard]");
 		const modal = document.getElementById("dashboardModal");
 		const embedContainer = document.getElementById("modal-embed");
 		const modalImage = document.getElementById("modal-image");
@@ -289,6 +290,13 @@
 				modalLink.href = link;
 				modalLink.textContent = trigger.getAttribute("data-link-label") || "Open in New Tab";
 				modal.style.display = "block";
+			});
+		});
+
+		liveDashboards.forEach(link => {
+			link.addEventListener("click", event => {
+				event.preventDefault();
+				window.location.assign(link.href);
 			});
 		});
 	});
