@@ -244,6 +244,7 @@
 		const modalImage = document.getElementById("modal-image");
 		const modalDescription = document.getElementById("modal-description");
 		const modalLink = document.getElementById("modal-link");
+		const modalCodeLink = document.getElementById("modal-code-link");
 		const closeButton = document.querySelector(".close-button");
 
 
@@ -272,6 +273,7 @@
 				const imageUrl = trigger.getAttribute("data-image");
 				const description = trigger.getAttribute("data-description");
 				const link = trigger.getAttribute("data-link");
+				const codeLink = trigger.getAttribute("data-code-link");
 
 				if (iframeId) {
 				const embedHtml = document.getElementById(iframeId);
@@ -288,6 +290,11 @@
 				modalDescription.textContent = description;
 				modalLink.href = link;
 				modalLink.textContent = trigger.getAttribute("data-link-label") || "Open in New Tab";
+				modalCodeLink.style.display = codeLink ? "inline-block" : "none";
+				if (codeLink) {
+					modalCodeLink.href = codeLink;
+					modalCodeLink.textContent = trigger.getAttribute("data-code-link-label") || "View Code on GitHub";
+				}
 				modal.style.display = "block";
 			});
 		});

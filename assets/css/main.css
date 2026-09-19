@@ -2395,7 +2395,8 @@ input, select, textarea {
   background: #102a43;
 }
 
-#dashboardModal #modal-link.button {
+#dashboardModal #modal-link.button,
+#dashboardModal #modal-code-link.button {
   background: #176b87 !important;
   border: 0;
   box-shadow: none;
@@ -2403,7 +2404,8 @@ input, select, textarea {
   margin-top: 0.75rem;
 }
 
-#dashboardModal #modal-link.button:hover {
+#dashboardModal #modal-link.button:hover,
+#dashboardModal #modal-code-link.button:hover {
   background: #0f5470 !important;
 }
 #modal-embed {
