@@ -218,9 +218,9 @@
 								<div class="image fit" 
 									data-modal-trigger 
 									data-image="images/thumbs/covid.png"
-									data-description="COVID-19 analysis — archived dashboard preview. Created with ArcGIS Insights, which has since retired."
-									data-link-label="View Dashboard Image"
-									data-link="images/thumbs/covid.png">
+									data-description="Interactive US COVID-19 dashboard with state-level case rates, totals, and proportional-symbol mapping."
+									data-link-label="View Interactive Dashboard"
+									data-link="https://sdsugeo.maps.arcgis.com/apps/dashboards/8fb2d6affb0c41d28e69a6ae0e341277">
 									<span class="image-header">COVID-19 Analysis in the US</span>
 									<img src="images/thumbs/covid.png" alt="COVID-19 dashboard preview" />
 								</div>
@@ -253,15 +253,21 @@
 						</div>
 
 						<section id="arcgis-covid" aria-labelledby="covid-title">
-                            <header>
-                                <h2 id="covid-title">COVID-19 Analysis in the US</h2>
-                                <p>Archived dashboard preview · Created with ArcGIS Insights.</p>
-                            </header>
-                            <a href="images/thumbs/covid.png" target="_blank" rel="noopener">
-                                <img src="images/thumbs/covid.png" alt="Archived COVID-19 analysis dashboard" loading="lazy" style="width: 100%; height: auto;" />
-                            </a>
-                            <p>ArcGIS Insights has retired. This saved image preserves the original dashboard; interactive filters are no longer available.</p>
-                        </section>
+							<header>
+								<h2 id="covid-title">COVID-19 Analysis in the US</h2>
+								<p>Interactive dashboard · Built with ArcGIS Dashboards.</p>
+							</header>
+							<div style="overflow: hidden; width: 100%; height: min(78vh, 900px); min-height: 620px; border-radius: 6px;">
+								<iframe
+									title="Interactive US COVID-19 analysis dashboard"
+									src="https://sdsugeo.maps.arcgis.com/apps/dashboards/8fb2d6affb0c41d28e69a6ae0e341277"
+									loading="lazy"
+									allowfullscreen
+									style="width: 100%; height: 100%; border: 0;">
+								</iframe>
+							</div>
+							<p><a href="https://sdsugeo.maps.arcgis.com/apps/dashboards/8fb2d6affb0c41d28e69a6ae0e341277" target="_blank" rel="noopener">Open the dashboard in a new tab</a></p>
+						</section>
 
 						<!-- ArcGIS Grenada -->
 						<div id="embed-arcgis-grenada" style="display: none;"></div>
